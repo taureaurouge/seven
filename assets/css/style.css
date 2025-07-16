@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --main-bg: #faf8f0;
+  --content: #1c1c1c;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 1rem;
+  --spacing-m: 2rem;
+  --spacing-l: 4rem;
+}
+
+* {
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--content);
+}
+
+h1, h2, form input {
+  margin-bottom: var(--spacing-l);
+  text-align: center;
+}
+
+
+header {
+  margin-bottom: var(--spacing-l);
+  position: relative;
+}
+
+main section {
+  margin-bottom: var(--spacing-l);
+}
+
+#main-application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-application input[type="text"] {
+    width: 300px;
+    background-color: transparent;
+}
+
+#map-area {
+    margin-bottom: var(--spacing-l);
+    background-color: darkolivegreen;
+    padding: 100px 42%;
+}
+
+#filter-function {
+    display: flex;
+    gap: 1rem;
+}
+
+
+input[type="checkbox"] {
+  transform: scale(3);
+  cursor: pointer;
+}
+
+footer {
+  margin-top: var(--spacing-l);
+}
+
+.container {
+  max-width: 78%;   /* obvs bredden på content */
+  margin: 0 auto;   /* 0 är upp + ner, auto sätter på något vis en balans mellan höger och vänster margin */
+}
+
+#create-event-btn {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  background-color: transparent;
+  border: 1px solid var(--content);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#main-heading {
+  font-family: "League Script", cursive;
+  margin-top: var(--spacing-l);
+  font-size: 72px;
+}
