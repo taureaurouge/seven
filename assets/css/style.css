@@ -3,8 +3,9 @@
 :root {
   --main-bg: #faf8f0;
   --content: #1c1c1c;
+  --placeholder-color: #e7d9d9;
   --spacing-xs: 0.5rem;
-  --spacing-s: 1rem;
+  --spacing-s: 1.5rem;
   --spacing-m: 2rem;
   --spacing-l: 4rem;
 }
@@ -27,7 +28,6 @@ h1, h2, form input {
   text-align: center;
 }
 
-
 header {
   margin-bottom: var(--spacing-l);
   position: relative;
@@ -37,55 +37,105 @@ main section {
   margin-bottom: var(--spacing-l);
 }
 
-#main-application {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#main-application input[type="text"] {
-    width: 300px;
-    background-color: transparent;
-}
-
-#map-area {
-    margin-bottom: var(--spacing-l);
-    background-color: darkolivegreen;
-    padding: 100px 42%;
-}
-
-#filter-function {
-    display: flex;
-    gap: 1rem;
-}
-
-
-input[type="checkbox"] {
-  transform: scale(3);
-  cursor: pointer;
-}
-
-footer {
-  margin-top: var(--spacing-l);
-}
-
 .container {
   max-width: 78%;   /* obvs bredden på content */
   margin: 0 auto;   /* 0 är upp + ner, auto sätter på något vis en balans mellan höger och vänster margin */
 }
 
+#main-application input[type="text"] {
+    width: 300px;
+    background-color: transparent;
+    display: block;      /* make input a block-level element */
+    margin: 0 auto;      /* auto left/right margins center it */
+}
+
+#map-area {
+    margin-bottom: var(--spacing-l);
+    background-color: var(--placeholder-color);
+    height: 200px;
+    border-radius: 20px;
+}
+
+#filter-function {
+    display: flex;
+    gap: 5rem;
+    margin: var(--spacing-l) 0;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#filter-function label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: var(--spacing-l);
+}
+
+#filter-function input[type="checkbox"] {
+  transform: scale(3);
+  cursor: pointer;
+  margin-bottom: var(--spacing-s);
+}
+
+#result-list {
+  display: flex;
+  flex-direction: column;     /* stack items vertically */
+  align-items: center;        /* center items horizontally */
+  gap: 1rem;                  /* optional spacing between items */
+  padding: 0;
+}
+
+#result-list li {
+  border: 1px solid var(--content);
+  padding: var(--spacing-xs) 20%;
+  border-radius: 10px;
+  text-align: end;
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+}
+
+.activity {
+  font-size: 32px;
+}
+
+.date {
+  font-size: 16px;
+}
+
+.location {
+  font-size: 12px;
+}
+
+.description {
+  font-size: 12px;
+}
+
+.event-img {
+  width: 20rem;
+  height: 98px;
+  background-color: var(--placeholder-color);
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+  margin-left: var(--spacing-s);
+  border-radius: 10px;
+}
+
 #create-event-btn {
   position: absolute;
-  top: 20px;
+  top: -50px;
   right: 10%;
   background-color: transparent;
-  border: 1px solid var(--content);
-  border-radius: 5px;
+  border: none;
   cursor: pointer;
+  padding: var(--spacing-m);
+  transform: rotate(10deg);
+  font-size: 16px;
 }
 
 #main-heading {
-  font-family: "League Script", cursive;
+  /* font-family: "League Script", cursive; */
   margin-top: var(--spacing-l);
   font-size: 72px;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- 
 git add .
-git commit -m "commit #1"
+git commit -m "an okay visual design for now (have I mentioned I hate css?)"
 git push
 -->
   <head>
@@ -17,7 +17,7 @@ git push
     <header>
       <button id="create-event-btn">create an event!</button>
       <div class="container">
-        <h1 id="main-heading">do shit, get payed</h1>
+        <h1 id="main-heading">the event listener</h1>
       </div>
     </header>
 
@@ -31,40 +31,42 @@ git push
               <li>
                 <label>
                   <input type="checkbox" name="exempelCheckbox" value="1">
-                  Kryssa i mig!
+                  filter item 1
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" name="exempelCheckbox" value="2">
-                  Kryssa i mig!
+                  filter item 2
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" name="exempelCheckbox" value="3">
-                  Kryssa i mig!
+                  filter item 3
                 </label>
               </li>
               <li>
                 <label>
                   <input type="checkbox" name="exempelCheckbox" value="4">
-                  Kryssa i mig!
+                  filter item 4
                 </label>
               </li>
             </ul>
           </form>
         </div>
         <div>
-          <ul>
-            <li>input från js</li> <!-- js goes here; we need to find a way  -->
+          <ul id="result-list">
+            <li>
+              <div><span class="activity">activity</span><br><span class="date">date</span><br><span class="location">place</span><br><span class="description">short description</span></div>
+              <div class="event-img"></div>
+            </li> <!-- js goes here; we need to find a way  -->
           </ul>
         </div>
       </section>
     </main>
 
-    <footer class="container">
-      <h2>nothing here for y'all to see 😊</h2>
-    </footer>
+     <script src="assets/js/script.js"></script>
+
   </body>
 </html>
