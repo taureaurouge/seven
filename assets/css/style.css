@@ -37,6 +37,10 @@ main section {
   margin-bottom: var(--spacing-l);
 }
 
+hr {
+  margin: var(--spacing-s);
+}
+
 .container {
   max-width: 78%;   /* obvs bredden på content */
   margin: 0 auto;   /* 0 är upp + ner, auto sätter på något vis en balans mellan höger och vänster margin */
@@ -47,6 +51,7 @@ main section {
     background-color: transparent;
     display: block;      /* make input a block-level element */
     margin: 0 auto;      /* auto left/right margins center it */
+    font-size: 50px;
 }
 
 #map-area {
@@ -70,7 +75,6 @@ main section {
     align-items: center;
     font-size: 12px;
     text-align: center;
-    margin-bottom: var(--spacing-l);
 }
 
 #filter-function input[type="checkbox"] {
@@ -138,4 +142,9 @@ main section {
   /* font-family: "League Script", cursive; */
   margin-top: var(--spacing-l);
   font-size: 72px;
+}
+
+#noevents {
+  text-align: center;
+  display: none;
 }
