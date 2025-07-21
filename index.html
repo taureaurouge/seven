@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- 
 git add .
-git commit -m "map added and implemented (so far only with external functions)"
+git commit -m "text-input functions implemented but there seems to be a problem with gaining access from googles geocoder-api"
 git push
 -->
   <head>
@@ -26,7 +26,7 @@ git push
         <div id="map-area"></div>
         <div>
           <form action="">
-            <input type="text" placeholder="location">
+            <input id="location-input" type="text" placeholder="location">
             <ul id="filter-function">
               <li>
                 <label>
@@ -70,9 +70,11 @@ git push
       </section>
     </main>
 
+     <script src="assets/js/googlemaps-api.js"></script>
+
      <script src="assets/js/script.js"></script>
 
-     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp4Ko_CYnVCAvSMtJQ89k7yIjqalv6VbY&callback=initMap"></script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp4Ko_CYnVCAvSMtJQ89k7yIjqalv6VbY&libraries=places&callback=initMap"></script>
 
   </body>
 </html>
