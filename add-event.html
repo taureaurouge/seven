@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Event Listener | Create an event!</title>
+
+    <meta name="description" content="Listen for events!">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <main>
+      <section class="container" id="main-application">
+        <div id="event-form">
+            <form action="" id="event-form-form">
+                <label for="title">Name for your event</label>
+                <input type="text" id="title" class="inpuit-title" name="title" required>
+                <br><br>
+                <label for="date, time">When?</label>
+                <input type="date" id="date" class="input-date" name="date" required>
+                <input type="time" id="time" class="input-time" name="time" required>
+                <br>
+                <label for="input-adress">Adress?</label>
+                <input type="text" id="input-adress" class="input-adress" name="input-adress" required>
+                <br><br>
+                <h2>Please select relevant categories:</h2>
+                <label for="input-music">Live music</label>
+                <input type="checkbox" id="input-music" class="input-music" name="input-music">
+                <br>
+                <label for="input-eat">Eating contest</label>
+                <input type="checkbox" id="input-eat" class="input-eat" name="input-eat">
+                <br>
+                <label for="input-1v1">1v1 wrestling</label>
+                <input type="checkbox" id="input-1v1" class="input-1v1" name="input-1v1">
+                <br>
+                <label for="input-bye">resignation party</label>
+                <input type="checkbox" id="input-bye" class="input-bye" name="input-bye">
+                <br>
+                <label for="input-description">Short description (Max x letters)</label>
+                <input type="text" id="input-description" class="input-description" name="input-description" maxlength="150" required> <!-- tried making this a text-area but something went very wrong
+                so I decided to leave it like this and focus on more essential tasks -->
+                <br>
+                <input type="submit" value="Create this event">
+
+            </form>
+        </div>
+      </section>
+    </main>
+
+     <script src="assets/js/googlemaps-api.js"></script>
+
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp4Ko_CYnVCAvSMtJQ89k7yIjqalv6VbY&libraries=places&callback=initMap"></script>
+
+  </body>
+</html>

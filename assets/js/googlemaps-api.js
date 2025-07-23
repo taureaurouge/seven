@@ -1,8 +1,6 @@
 
 
-let geocoder;
-let autocomplete;
-let input;
+// google maps api implementation
 
 function initMap() {
     const startPosition = { lat: 59.3293, lng: 18.0686};
@@ -139,54 +137,30 @@ function initMap() {
         ]
     });
 
-    const marker = new google.maps.Marker({
-        position: startPosition,
-        map: map,
-    });
-
-    marker.setVisible(false);
-
-    input = document.getElementById("location-input");
-
-    geocoder = new google.maps.Geocoder();
-
-    autocomplete = new google.maps.places.Autocomplete(input, {
-      types: ["(cities)"],
-    });
-
-    autocomplete.addListener("place_changed", () => {
-      const place = autocomplete.getPlace();
-      if (place.geometry && place.geometry.location) {
-        map.setCenter(place.geometry.location);
-        map.setZoom(12);
-      }
-    });
-
-    map.addListener("idle", updateCityFromCenter);
-
-    updateCityFromCenter();
-
-    function updateCityFromCenter() {
-        const center = map.getCenter();
-        geocoder.geocode({ location: center }, (results, status) => {
-        if (status === "OK" && results.length > 0) {
-            const cityResult = results.find(result =>
-            result.types.includes("locality") || result.types.includes("postal_town")
-            );
-
-            if (cityResult) {
-            const cityName = cityResult.address_components[0].long_name;
-            input.value = cityName;
-            } else {
-            input.value = "Okänd plats";
-            }
-        } else {
-            console.error("Geokodning misslyckades:", status);
-        }
-        });
-    }
-
 }
 
 window.initMap = initMap;
 
+
+
+// a function to create events!
+
+const events = [];  // storing created events
+
+function createEvent(eventId, title, date, location, options, description) {
+    const event = {
+        eventId: events.length,
+        title: title,
+        date: new Date(date),
+        location: location,
+        option1: options[0],
+        option2: options[1],
+        option3: options[2],
+        option4: options[3],
+        description: description
+    };
+
+    events.push(event); // created event sent to events
+
+    addMarkerToMap(event); //funktion vi ännu inte har skapat!
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- 
 git add .
-git commit -m "text-input functions implemented but there seems to be a problem with gaining access from googles geocoder-api"
+git commit -m "realizing that this application will be very unstable without access to back-end servers so will probably create something basic and continue this project in the next module"
 git push
 -->
   <head>
@@ -15,7 +15,9 @@ git push
   </head>
   <body>
     <header>
-      <button id="create-event-btn">create an event!</button>
+      <a href="add-event.html" target="_blank">
+        <button id="create-event-btn">create an event!</button>
+      </a>
       <div class="container">
         <h1 id="main-heading">the event listener</h1>
       </div>
@@ -30,26 +32,26 @@ git push
             <ul id="filter-function">
               <li>
                 <label>
-                  <input type="checkbox" name="exempelCheckbox" value="1">
-                  filter item 1
+                  <input type="checkbox" name="filter-music" value="1">
+                  Live music
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="exempelCheckbox" value="2">
-                  filter item 2
+                  <input type="checkbox" name="filter-eat" value="2">
+                  Eating contest
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="exempelCheckbox" value="3">
-                  filter item 3
+                  <input type="checkbox" name="filter-1v1" value="3">
+                  1v1 Wrestling
                 </label>
               </li>
               <li>
                 <label>
-                  <input type="checkbox" name="exempelCheckbox" value="4">
-                  filter item 4
+                  <input type="checkbox" name="filter-bye" value="4">
+                  Resignation party
                 </label>
               </li>
             </ul>
@@ -59,7 +61,7 @@ git push
         <div>
           <ul id="result-list">
             <li>
-              <div><span class="activity">activity</span><br><span class="date">date</span><br><span class="location">place</span><br><span class="description">short description</span></div>
+              <div><span class="title">title</span><br><span class="date">date</span><br><span class="location">place</span><br><span class="description">short description</span></div>
               <div class="event-img"></div>
             </li> <!-- js goes here; we need to find a way  -->
           </ul>
@@ -71,8 +73,6 @@ git push
     </main>
 
      <script src="assets/js/googlemaps-api.js"></script>
-
-     <script src="assets/js/script.js"></script>
 
      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp4Ko_CYnVCAvSMtJQ89k7yIjqalv6VbY&libraries=places&callback=initMap"></script>
 
