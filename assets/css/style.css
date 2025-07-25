@@ -111,7 +111,6 @@ hr {
   margin-bottom: var(--spacing-xs);
   display: flex;
   background-color: var(--main-bg-transparent);
-  display: none;
 }
 
 .activity {
@@ -153,7 +152,6 @@ hr {
 }
 
 #main-heading {
-  /* font-family: "League Script", cursive; */
   margin-top: var(--spacing-l);
   font-size: 72px;
 }
